@@ -1,0 +1,162 @@
+[
+    {
+        "id": 1,
+        "name": "The Alchemist",
+        "title": "Paulo Coelho",
+        "price": "$10",
+        "category": "free",
+        "image": "https://m.media-amazon.com/images/I/61HAE8zahLL._AC_UF1000,1000_QL80_.jpg"
+    },
+    {
+        "id": 2,
+        "name": "To Kill a Mockingbird",
+        "title": "Harper Lee",
+        "price": "$10",
+        "category": "free",
+        "image": "https://cdn.britannica.com/21/182021-050-666DB6B1/book-cover-To-Kill-a-Mockingbird-many-1961.jpg"
+    },
+    {
+        "id": 3,
+        "name": "1984",
+        "title": "George Orwell",
+        "price": "$10",
+        "category": "free",
+        "image": "https://tankmuseumshop.org/cdn/shop/products/1984.jpg?v=1588779384&width=1284"
+    },
+    {
+        "id": 4,
+        "name": "The Catcher in the Rye",
+        "title": "J.D. Salinger",
+        "price": "$10",
+        "category": "free",
+        "image": "https://m.media-amazon.com/images/I/7108sdEUEGL.jpg"
+    },
+    {
+        "id": 5,
+        "name": "The Great Gatsby",
+        "title": "F. Scott Fitzgerald",
+        "price": "$10",
+        "category": "free",
+        "image": "https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg?t=st=1733741708~exp=1733745308~hmac=dc004e7d1486177a3dcbf50d540a30361cf96e4b7244c4a0fc41adbe0ca22454&w=740"
+    },
+    {
+        "id": 6,
+        "name": "Moby Dick",
+        "title": "Herman Melville",
+        "price": "$10",
+        "category": "free",
+        "image": "https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg?t=st=1733741708~exp=1733745308~hmac=dc004e7d1486177a3dcbf50d540a30361cf96e4b7244c4a0fc41adbe0ca22454&w=740"
+    },
+    {
+        "id": 7,
+        "name": "Pride and Prejudice",
+        "title": "Jane Austen",
+        "price": "$10",
+        "category": "free",
+        "image": "https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg?t=st=1733741708~exp=1733745308~hmac=dc004e7d1486177a3dcbf50d540a30361cf96e4b7244c4a0fc41adbe0ca22454&w=740"
+    },
+    {
+        "id": 8,
+        "name": "The Hobbit",
+        "title": "J.R.R. Tolkien",
+        "price": "$10",
+        "category": "free",
+        "image": "https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg?t=st=1733741708~exp=1733745308~hmac=dc004e7d1486177a3dcbf50d540a30361cf96e4b7244c4a0fc41adbe0ca22454&w=740"
+    },
+    {
+        "id": 9,
+        "name": "War and Peace",
+        "title": "Leo Tolstoy",
+        "price": "$10",
+        "category": "Paid",
+        "image": "https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg?t=st=1733741708~exp=1733745308~hmac=dc004e7d1486177a3dcbf50d540a30361cf96e4b7244c4a0fc41adbe0ca22454&w=740"
+    },
+    {
+        "id": 10,
+        "name": "Little Women",
+        "title": "Louisa May Alcott",
+        "price": "$15",
+        "category": "classic",
+        "image": "https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg?t=st=1733741708~exp=1733745308~hmac=dc004e7d1486177a3dcbf50d540a30361cf96e4b7244c4a0fc41adbe0ca22454&w=740g"
+    },
+    {
+        "id": 11,
+        "name": "The Lord of the Rings",
+        "title": "J.R.R. Tolkien",
+        "price": "$20",
+        "category": "fantasy",
+        "image": "https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg?t=st=1733741708~exp=1733745308~hmac=dc004e7d1486177a3dcbf50d540a30361cf96e4b7244c4a0fc41adbe0ca22454&w=740"
+    },
+    {
+        "id": 12,
+        "name": "The Diary of a Young Girl",
+        "title": "Anne Frank",
+        "price": "$12",
+        "category": "historical",
+        "image": "https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg?t=st=1733741708~exp=1733745308~hmac=dc004e7d1486177a3dcbf50d540a30361cf96e4b7244c4a0fc41adbe0ca22454&w=740"
+    },
+    {
+        "id": 13,
+        "name": "The Kite Runner",
+        "title": "Khaled Hosseini",
+        "price": "$18",
+        "category": "modern literature",
+        "image": "https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg?t=st=1733741708~exp=1733745308~hmac=dc004e7d1486177a3dcbf50d540a30361cf96e4b7244c4a0fc41adbe0ca22454&w=740"
+    },
+    {
+        "id": 14,
+        "name": "Brave New World",
+        "title": "Aldous Huxley",
+        "price": "$10",
+        "category": "dystopian",
+        "image": "https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg?t=st=1733741708~exp=1733745308~hmac=dc004e7d1486177a3dcbf50d540a30361cf96e4b7244c4a0fc41adbe0ca22454&w=740"
+    },
+    {
+        "id": 15,
+        "name": "Crime and Punishment",
+        "title": "Fyodor Dostoevsky",
+        "price": "$16",
+        "category": "philosophy",
+        "image": "https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg?t=st=1733741708~exp=1733745308~hmac=dc004e7d1486177a3dcbf50d540a30361cf96e4b7244c4a0fc41adbe0ca22454&w=740"
+    },
+    {
+        "id": 16,
+        "name": "The Odyssey",
+        "title": "Homer",
+        "price": "$14",
+        "category": "mythology",
+        "image": "https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg?t=st=1733741708~exp=1733745308~hmac=dc004e7d1486177a3dcbf50d540a30361cf96e4b7244c4a0fc41adbe0ca22454&w=740"
+    },
+    {
+        "id": 17,
+        "name": "Wuthering Heights",
+        "title": "Emily Brontë",
+        "price": "$12",
+        "category": "romance",
+        "image": "https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg?t=st=1733741708~exp=1733745308~hmac=dc004e7d1486177a3dcbf50d540a30361cf96e4b7244c4a0fc41adbe0ca22454&w=740"
+    },
+    {
+        "id": 18,
+        "name": "Dracula",
+        "title": "Bram Stoker",
+        "price": "$11",
+        "category": "horror",
+        "image": "https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg?t=st=1733741708~exp=1733745308~hmac=dc004e7d1486177a3dcbf50d540a30361cf96e4b7244c4a0fc41adbe0ca22454&w=740"
+    },
+    {
+        "id": 19,
+        "name": "The Road",
+        "title": "Cormac McCarthy",
+        "price": "$13",
+        "category": "post-apocalyptic",
+        "image": "https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg?t=st=1733741708~exp=1733745308~hmac=dc004e7d1486177a3dcbf50d540a30361cf96e4b7244c4a0fc41adbe0ca22454&w=740"
+    },
+    {
+        "id": 20,
+        "name": "Frankenstein",
+        "title": "Mary Shelley",
+        "price": "$12",
+        "category": "science fiction",
+        "image": "https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg?t=st=1733741708~exp=1733745308~hmac=dc004e7d1486177a3dcbf50d540a30361cf96e4b7244c4a0fc41adbe0ca22454&w=740"
+    }
+]
