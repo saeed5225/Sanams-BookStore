@@ -1,15 +1,28 @@
 import React, { useEffect, useState } from "react";
 import Login from "./Login";
-
+import toast from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { setUser } from "../app/userSlice";
 export default function Navbar() {
+  const navigate = useNavigate();
+  const currentUser = useSelector((state) => state.user.currenUser);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    console.log("Updated current user:", currentUser);
+  }, [currentUser]);
   const navitems = (
     <>
       <li>
         <a href="/">Home</a>
       </li>
-      <li>
-        <a href="/course">Course</a>
-      </li>
+
+      {currentUser && (
+        <li>
+          <a href="/course">Course</a>
+        </li>
+      )}
+
       <li>
         <a>Contact</a>
       </li>
@@ -52,6 +65,16 @@ export default function Navbar() {
       document.body.classList.remove("dark");
     }
   }, [theme]);
+
+  const handleSignOut = async () => {
+    const res = await fetch("http://localhost:3001/user/logout", {
+      method: "GET",
+      credentials: "include",
+    });
+    toast.success("Successfully Logged out!");
+    dispatch(setUser(null));
+    navigate("/");
+  };
 
   return (
     <div
@@ -102,12 +125,9 @@ export default function Navbar() {
             </ul>
           </div>
           <div className="hidden md:block">
-            <label className={`px-3 py-2  rounded-md flex items-center gap-1`}>
-              <input
-                type="text"
-                className={`grow outline-none text-sm bg-inherit`}
-                placeholder="Search"
-              />
+            <label
+              className={`px-3 py-2 rounded-md flex items-center gap-1  focus-within:ring-1 focus-within:ring-pink-500 dark:focus-within:ring-white shadow-sm`}
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 16 16"
@@ -120,6 +140,11 @@ export default function Navbar() {
                   clipRule="evenodd"
                 />
               </svg>
+              <input
+                type="text"
+                className="rounded-md grow outline-none text-sm bg-transparent"
+                placeholder="Search"
+              />
             </label>
           </div>
 
@@ -149,12 +174,23 @@ export default function Navbar() {
             </label>
           </div>
           <div className="">
-            <a
-              className="btn w-20 dark:bg-white dark:text-black bg-black text-white px-5s"
-              onClick={() => document.getElementById("login_modal").showModal()}
-            >
-              Login
-            </a>
+            {!currentUser ? (
+              <a
+                className="btn w-20 dark:bg-white dark:text-black bg-black text-white px-5s"
+                onClick={() =>
+                  document.getElementById("login_modal").showModal()
+                }
+              >
+                Login
+              </a>
+            ) : (
+              <a
+                className="btn  dark:bg-white dark:text-black bg-black text-white px-5s"
+                onClick={handleSignOut}
+              >
+                Sign out
+              </a>
+            )}
             <Login />
           </div>
         </div>

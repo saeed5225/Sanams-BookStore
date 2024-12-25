@@ -6,9 +6,11 @@ import Footer from "../components/Footer";
 export default function Courses() {
   return (
     <>
-      <Navbar />
-      <Course />
-      <Footer />
+      <div className="">
+        <Navbar />
+        <Course />
+        <Footer />
+      </div>
     </>
   );
 }

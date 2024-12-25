@@ -1,18 +1,45 @@
 import React, { useState } from "react";
+import toast from "react-hot-toast";
 import { Link, useNavigate } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { setUser } from "../app/userSlice";
 
 export default function Login() {
   const navigate = useNavigate();
   const [data, setdata] = useState({});
+  const dispatch = useDispatch();
 
   const handleChange = (e) => {
     setdata({ ...data, [e.target.id]: e.target.value });
   };
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
-    console.log(data);
+    try {
+      const res = await fetch("http://localhost:3001/user/login", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify(data),
+        credentials: "include",
+      });
+
+      const data_log = await res.json();
+      if (!res.ok) {
+        throw new Error(data_log.Error || "An error occurred during login."); // Throw an error to trigger the catch block
+      }
+
+      console.log(data_log);
+      localStorage.setItem("id", data_log.user.id);
+      dispatch(setUser(data_log.user));
+      toast.success("Successfully Logged in!");
+      document.getElementById("login_modal").close();
+      navigate("/");
+    } catch (error) {
+      toast.error(error.message); // Display the error message in a toast notification
+      console.error(error); // Log the error for debugging
+    }
   };
+
   return (
     <dialog id="login_modal" className="modal">
       <div className="dark:bg-slate-900 dark:text-white modal-box">

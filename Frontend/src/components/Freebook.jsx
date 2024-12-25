@@ -1,5 +1,4 @@
-import React from "react";
-import list from "../../public/list.json";
+import React, { useEffect, useState } from "react";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -7,6 +6,23 @@ import Slider from "react-slick";
 import Cards from "./Cards";
 
 export default function Freebook() {
+  const [list, setList] = useState([]);
+  useEffect(() => {
+    const getBooks = async () => {
+      try {
+        const res = await fetch("http://localhost:3001/book/", {
+          credentials: "include",
+        });
+        const data = await res.json();
+
+        setList(data.book);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    getBooks();
+  }, []);
+
   const freeBook = list.filter((data) => {
     return data.category === "free";
   });

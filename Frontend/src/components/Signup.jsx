@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import banner from "../../public/Signup.png";
 import Login from "./Login";
+import toast from "react-hot-toast";
 
 export default function Signup() {
   const [data, setdata] = useState({});
@@ -9,9 +10,25 @@ export default function Signup() {
     setdata({ ...data, [e.target.id]: e.target.value });
   };
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
-    console.log(data);
+    try {
+      const signup_data = await fetch("http://localhost:3001/user/signup", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+        credentials: "include",
+      });
+      const res = await signup_data.json();
+      if (!res.ok) {
+        throw new Error(res.Error || "An error has occured");
+      }
+      console.log(res);
+      toast.success("Account Created Succesfully!");
+    } catch (error) {
+      console.log(error);
+      toast.error(error.message);
+    }
   };
 
   return (
@@ -23,7 +40,7 @@ export default function Signup() {
           <h1 className="text-center dark:text-white text-3xl font-serif font-extrabold text-gray-800 mb-8">
             Sign <span className="text-pink-500">Up</span>
           </h1>
-          <form onSubmit={handleLogin}>
+          <form onSubmit={handleLogin} className="text-black">
             <div className="space-y-6">
               <div>
                 <label className="block text-sm font-semibold dark:text-white text-gray-700">
